@@ -4,8 +4,9 @@
     font-family: "Poppins", sans-serif;
 }
 body{
-    max-width: 1440px;
+    margin: 0 auto;
 }
+
 header{
     display: flex;
     justify-content: space-between;
@@ -38,12 +39,16 @@ header p {
     font-weight: 400;
     line-height: 30px;
 }
+header .burger-menu{
+    display: none;
+}
 main .start{
     background: linear-gradient(143.87deg, #190422 21.1%, #190422 102.96%);
     padding: 17px 80px 196px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 main .start .left-part{
     display: flex;
@@ -88,7 +93,6 @@ main .counts{
     border-radius: 16px;
     position: relative;
     background: #FFFFFF;
-    right: 10px;
     bottom: 100px;
     box-shadow: 0px 2px 10px 0px #00000026;
 }
@@ -116,7 +120,7 @@ main .about{
     gap: 174px;
     align-items: center;
     justify-content: center;
-    padding-bottom: 107px;
+    padding:0px 80px 107px 147px;
 }
 main .right-block{
     display: flex;
@@ -163,7 +167,7 @@ main .service h2{
 }
 main .service .grid{
     display: grid;
-    grid-template-columns: 477px 477px;
+    grid-template-columns: auto auto;
     grid-template-rows: 257px 244px;
     grid-column-gap: 173px ;
     grid-row-gap: 40px;
@@ -205,6 +209,9 @@ main .mobile-app{
         margin-bottom: 42px;
         
     }
+}
+main .mobile-app {
+
 }
 main .mobile-app .right-part{
     position: absolute;
@@ -295,7 +302,7 @@ main .comments .main-part{
     align-items: center;
     justify-content: center;
 }
-main .comments .main-part .arrow{
+main .comments .main-part .arrow, main .comments .arrow{
     border-radius: 50%;
     display: flex;
     border: 2px solid #BC8AFC;
@@ -307,8 +314,11 @@ main .comments .main-part .arrow{
         width: 12px;
     }
 }
-main .comments .main-part .right-arrow img{
-    transform
+main .comments .main-part .right-arrow, main .comments .right-arrow{
+    transform: scale(-1, 1)
+}
+main .comments .one-comment-block{
+    display: none;
 }
 main .comments .main-part .comments-items{
     display: flex;
@@ -363,4 +373,222 @@ footer .footer-list{
 footer .socials{
     display: flex;
     gap: 21px;
+}
+@media (max-width: 1200px) {
+    header .burger-menu{
+        display: block;
+    }
+    header .right-block{
+        display: none;
+    }
+    main .start{
+        padding-bottom: 150px;
+    }
+    main .start .cards{
+        width: 429px;
+    }
+    main .start .left-part h1{
+        font-size: 48px;
+        line-height: 57.6px;
+    }
+    main .counts{
+        padding: 40px
+    }
+    main .about{
+        padding: 0px 105px 45px 147px;
+        margin: 0;
+        gap: 71px;
+        & h2 {
+            font-size: 32px;
+            line-height: 39.2px;
+        }
+    }
+    main .about .director{
+        width: 268px;
+    }
+    main .service{
+        padding-bottom: 129px;
+    }
+    main .service .grid{
+        grid-column-gap: 20px;
+        grid-row-gap: 40px;
+    }
+    main .benefits{
+        padding: 40px 40px 40px 89px;
+        gap: 71px;
+    }
+    main .benefits .left-part img{
+        width: 267px;
+        padding-top: 36px;      
+    }
+    main .benefits .right-part{
+        width: 60%;
+    }
+    footer{
+        padding: 72px 40px 61px;
+    }
+    footer .logo{
+        margin-bottom: 32px;
+        & img{
+            width: 105px;
+        }
+    }
+    footer .footer-list{
+        flex-direction: column;
+        margin-bottom: 61px;
+    }
+}
+@media (max-width:1260px) {
+    main .comments{
+        padding: 40px 137px 50px;
+    }
+    main .comments .item:last-child{
+        display: none;
+    }
+    main .comments .one-comment-block{
+        margin-top: 47px;
+        display: flex;
+        gap: 104px;
+        justify-content: center;
+    }
+    main .comments .main-part .arrow-none{
+        display: none;
+    }
+}
+@media (max-width: 1360px) {
+    main .mobile-app {
+        padding: 56px 0px 33px 39px;
+        & h1 {
+            font-size: 32px;
+        }
+    }
+    main .mobile-app img{
+        width: 273px;
+        height: 402px;
+    }
+    main .mobile-app .left-part{
+        width: 50%;
+    }
+}
+@media (max-width: 760px) {
+    main .start{
+        display: block;
+    }
+}
+@media (max-width: 680px) {
+    
+    header{
+        padding: 19px 16px 65px;
+    }
+    main .start{
+        padding: 0px 16px 123px;
+        & .left-part{
+            gap: 24px;
+        }
+        & .cards {
+            width: 354px;
+            margin-top: 11px;
+            margin-bottom: 40px;
+        }
+    }
+    main .counts {
+        flex-direction: column;
+        padding: 32px;
+        padding: 32px 69px;
+        gap: 32px;
+        width: 219px;
+        margin: 0 auto;
+        bottom: 50px;
+        
+        & h1{
+            padding: 0;
+        }
+    }
+    main .about{
+        flex-direction: column;
+        padding: 0;
+        justify-content: center;
+        padding-right: 17px;
+        padding-left: 17px;
+        padding-bottom: 40px;
+        gap: 55px;
+    }
+    main .service{
+        margin: 0;
+        padding: 32px 17px;
+        & h2{
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 56.88px;
+            margin-bottom: 24px;
+        }
+        & .grid{
+            grid-template-columns: 355px;
+            grid-template-rows: 302px 302px 302px 302px;
+            grid-row-gap: 24px;
+        }
+    }
+    main .about h2{
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 44.1px;
+    }
+    main .about .right-block{
+        gap: 24px;
+    }
+    main .mobile-app{
+        display: block;
+        padding: 24px 16px 0px ;
+        & .right-part{
+            position: static;
+        }
+        & .left-part{
+            width: auto;
+        }
+        & .btns{
+            flex-direction: row-reverse;
+            justify-content: start;
+            gap: 8px;
+            & button{
+                background-position: center;
+            }
+        }
+    }
+    main .benefits{
+        flex-direction: column;
+        padding: 40px 18px 23px;
+        & .left-part{
+            display: none;
+        }
+        & .right-part{
+            width: auto;
+        }
+        & h1{
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 46.98px;
+        }
+    }
+    main .comments{
+        padding: 32px 17px 46px;
+        text-align: left;
+        & .title{
+            text-align: left;
+        }
+    }
+    main .comments .main-part .comments-items .item{
+        padding: 24px 24px 12px;
+    }
+    main .comments .main-part .comments-items .item .author{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 24px;
+    }
+    main .comments .one-comment-block{
+        margin-top: 24px;
+    }
+    footer{
+        padding: 32px 15px 63px;
+        margin-bottom: 206px;
+    }
 }
